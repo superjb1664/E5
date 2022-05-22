@@ -10,7 +10,7 @@ if (function_exists('curl_init'))
 {
     $curl = curl_init();
 
-    curl_setopt($curl, CURLOPT_URL, "jbaubry.fr/E5.php");
+    curl_setopt($curl, CURLOPT_URL, "https://www.jbaubry.fr/coursEnLigne/E5.php");
     curl_setopt($curl, CURLOPT_PORT, "443");
     curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET');
 
