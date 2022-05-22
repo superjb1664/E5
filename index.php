@@ -17,11 +17,14 @@ if (function_exists('curl_init'))
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 
     $output = curl_exec($curl);
-    echo "<H2>Réponse jbaubry.fr : $output</H2>";
+    if($output == "32631827")
+         echo "<H2>jbaubry.fr : OK</H2>";
+    else
+        echo "<H2>jbaubry.fr : pas OK</H2>";
 }
 else
 {
-    echo "apt install php-curl puis redémarrer systeme";
+    echo "<br>'apt install php-curl' puis redémarrer apache 2<br>";
 }
 
 if(isset($_REQUEST["etat"])) {
